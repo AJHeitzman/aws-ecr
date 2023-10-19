@@ -1,0 +1,6 @@
+name: aws-ecr
+runtime:
+  name: python
+  options:
+    virtualenv: venv
+description: Provisions ECR in AWS so you can store container images.
