@@ -1,2 +1,42 @@
 config:
+  AWS-ECR:repositories:
+    my-docker-image-01:
+      scan_on_push: True
+      image_tag_mutability: MUTABLE
+      untagged_retention_days: 1
+      tagged_image_count_to_keep: 5
+      tag_prefix_list:
+        - v
+      policy:
+        actions:
+          - ecr:GetDownloadUrlForLayer
+          - ecr:BatchGetImage
+          - ecr:BatchCheckLayerAvailability
+          - ecr:CompleteLayerUpload
+          - ecr:DescribeRepositories
+          - ecr:DescribeImages
+          - ecr:GetRepositoryPolicy
+          - ecr:ListImages
+        principals: None
+          #- arn:aws:iam::<account_number>:<user>
+    my-docker-image-02:
+      scan_on_push: True
+      image_tag_mutability: MUTABLE
+      untagged_retention_days: 1
+      tagged_image_count_to_keep: 3
+      tag_prefix_list:
+        - v
+      policy:
+        actions:
+          - ecr:GetDownloadUrlForLayer
+          - ecr:BatchGetImage
+          - ecr:BatchCheckLayerAvailability
+          - ecr:CompleteLayerUpload
+          - ecr:DescribeRepositories
+          - ecr:DescribeImages
+          - ecr:GetRepositoryPolicy
+          - ecr:ListImages
+        principals: None
+          #- arn:aws:iam::<account_number>:<user>          
+  aws:profile: pulumi_admin
   aws:region: us-east-1

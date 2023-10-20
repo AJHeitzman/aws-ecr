@@ -1,4 +1,4 @@
-name: aws-ecr
+name: AWS-ECR
 runtime:
   name: python
   options:
