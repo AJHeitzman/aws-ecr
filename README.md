@@ -4,7 +4,7 @@
 ![Visual_Studio_Code](https://img.shields.io/badge/Visual_Studio_Code-1.83.0-informational?logo=VisualStudioCode)
 
 # AWS ECR
-This is a [Pulumi](www.pulumi.com) Python project iss used to provision ECR in AWS.
+This is a [Pulumi](www.pulumi.com) Python project is used to provision ECR in AWS.
 
 ## Multiple AWS Account Setup
 This project will easily support a multiple AWS account deployment. Simply change aws profile in the stacks config to one that is configured to use the account you wish to deploy resources to.
